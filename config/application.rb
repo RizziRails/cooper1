@@ -9,6 +9,8 @@ Bundler.require(*Rails.groups)
 module Cooper1
   class Application < Rails::Application
     config.assets.initialize_on_precompile = false
+    
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -23,5 +25,12 @@ module Cooper1
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    
+    
+    config.cache_classes = true 
+    config.serve_static_assets = true 
+    config.assets.compile = false 
+    config.assets.digest = true
+    
   end
 end
