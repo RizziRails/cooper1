@@ -8,4 +8,4 @@
 #user = CreateAdminService.new.call
 #puts 'CREATED ADMIN USER: ' << user.email
 
-users  = User.create([{ email: 'user@example.com', encrypeted_password: '$2a$10$kf8pAFpLgCJWXWV06J2dGuJ3hE2JG.CeUmHuk6YJmmswQTzzXN5qy', sign_in_count: 2 }])
+users  = User.create([{ email: 'user@example.com', encrypted_password: '$2a$10$kf8pAFpLgCJWXWV06J2dGuJ3hE2JG.CeUmHuk6YJmmswQTzzXN5qy', sign_in_count: '2' }])
