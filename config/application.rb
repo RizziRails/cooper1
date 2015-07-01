@@ -9,7 +9,7 @@ Bundler.require(*Rails.groups)
 module Cooper1
   class Application < Rails::Application
    # config.assets.initialize_on_precompile = false
-    config.assets.initialize_on_precompile = true
+    config.assets.initialize_on_precompile = false
     
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
     # Settings in config/environments/* take precedence over those specified here.
